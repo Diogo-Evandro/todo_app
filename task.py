@@ -17,10 +17,18 @@ def remove_task(index):
         print("Índice inválido")
 
 
+def complete_task(index):
+    if 0 <= index < len(tasks):
+        tasks[index]["completed"] = True
+	    print("Task completed!")
+    else:
+        print("Índice inválido")
+
+
 def main():
     print("Personal Task Manager")
     while True:
-        command = input("Comando (add/list/remove/exit): ")
+        command = input("Comando (add/list/remove/complete/exit): ")
         if command == "add":
             task = input("Tarefa: ")
             add_task(task)
@@ -29,6 +37,9 @@ def main():
         elif command == "remove":
             index = int(input("Índice da tarefa a remover: ")) - 1
             remove_task(index)
+        elif command == "complete":
+            index = int(input("Índice da tarefa a completar: ")) - 1
+            complete_task(index)
         elif command == "exit":
             break
 
