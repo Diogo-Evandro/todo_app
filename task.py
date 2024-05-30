@@ -25,6 +25,12 @@ def complete_task(index):
         print("Índice inválido")
 
 
+def remove_task(index):
+    if 0 <= index < len(tasks):
+        tasks.pop(index)
+    else:
+        print("Índice inválido")
+
 def main():
     print("Personal Task Manager")
     while True:
