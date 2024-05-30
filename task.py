@@ -20,7 +20,7 @@ def remove_task(index):
 def complete_task(index):
     if 0 <= index < len(tasks):
         tasks[index]["completed"] = True
-	    print("Task completed!")
+        print("Task completed!")
     else:
         print("Índice inválido")
 
